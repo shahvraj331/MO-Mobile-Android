@@ -1,3 +1,12 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">RestaurantManagement</string>
+
+    <!-- Login -->
+    <string name="tv_login">SIGN IN</string>
+    <string name="et_email">Enter Email</string>
+    <string name="et_password">Enter Password</string>
+    <string name="btn_login">Login</string>
+    <string name="txt_required">Required*</string>
+    <string name="txt_invalid_email">Invalid Email id</string>
+    <string name="login_activity">Login</string>
 </resources>
