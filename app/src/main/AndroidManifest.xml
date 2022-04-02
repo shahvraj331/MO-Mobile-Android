@@ -11,21 +11,30 @@
         android:theme="@style/Theme.RestaurantManagement">
         <activity
             android:name=".activities.Login"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".activities.SignupActivity"
-            android:exported="true" >
-
+            android:exported="true" />
+        <activity
+            android:name=".tutorial.TutorialScreen4"
+            android:exported="false" />
+        <activity
+            android:name=".tutorial.TutorialScreen3"
+            android:exported="false" />
+        <activity
+            android:name=".tutorial.TutorialScreen2"
+            android:exported="false" />
+        <activity
+            android:name=".tutorial.TutorialScreen1"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-
         </activity>
     </application>
 
