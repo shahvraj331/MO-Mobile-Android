@@ -1,14 +1,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">RestaurantManagement</string>
+    <string name="signup">Signup</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="signin">Signin</string>
 
     <!-- Login -->
-    <string name="tv_login">SIGN IN</string>
+    <string name="tv_login">Login</string>
+    <string name="login_subtitle">Let\'s Login to Access all features</string>
     <string name="et_email">Enter Email</string>
     <string name="et_password">Enter Password</string>
     <string name="btn_login">Login</string>
     <string name="txt_required">Required*</string>
     <string name="txt_invalid_email">Invalid Email id</string>
     <string name="login_activity">Login</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
 
 
     <!-- Sign up string -->
@@ -24,6 +34,13 @@
     <string name="or">OR</string>
     <string name="txt_password_mismatch">Password Mis-match</string>
     <string name="sign_up_activity">Sign up</string>
+    <string name="tutorialscreen_txt1">You are what you eat \nso eat right.</string>
+    <string name="tutorial_screen_txt2">Taste fresh delicious meals \nanytime</string>
+    <string name="tutorial_screen_txt3">Choose your favourite dishes \nfrom the menu</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="text_will_do_letter">I will do it letter</string>
+    <string name="content_description">Image</string>
     <!-- End sign up strings -->
 
     <!--Home-->
