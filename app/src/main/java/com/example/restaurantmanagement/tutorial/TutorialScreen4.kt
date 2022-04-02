@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.restaurantmanagement.R
 import com.example.restaurantmanagement.activities.Login
-import com.example.restaurantmanagement.databinding.ActivityTutorialScreen3Binding
 import com.example.restaurantmanagement.databinding.ActivityTutorialScreen4Binding
 
 class TutorialScreen4 : AppCompatActivity() {
@@ -19,8 +18,8 @@ class TutorialScreen4 : AppCompatActivity() {
         overridePendingTransition(R.anim.slid_left, R.anim.slide_right)
 
         binding.btnLogin.setOnClickListener {
-            val i = Intent(applicationContext, Login::class.java)
-            startActivity(i)
+            val intent = Intent(applicationContext, Login::class.java)
+            startActivity(intent)
         }
     }
 

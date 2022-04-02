@@ -18,13 +18,13 @@ class TutorialScreen1 : AppCompatActivity() {
         overridePendingTransition(R.anim.slid_left, R.anim.slide_right)
 
         binding.btnNext.setOnClickListener {
-            val i = Intent(applicationContext, TutorialScreen2::class.java)
-            startActivity(i)
+            val intent = Intent(applicationContext, TutorialScreen2::class.java)
+            startActivity(intent)
         }
 
         binding.tvSkip.setOnClickListener {
-            val i = Intent(applicationContext, Login::class.java)
-            startActivity(i)
+            val intent = Intent(applicationContext, Login::class.java)
+            startActivity(intent)
         }
     }
 

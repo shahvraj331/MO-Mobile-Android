@@ -58,7 +58,7 @@
         android:shadowRadius="2"
         android:text="@string/sign_up"
         android:textColor="@color/black"
-        android:textSize="@dimen/_10sdp"
+        android:textSize="@dimen/_14sdp"
         android:textStyle="bold"
         android:translationZ="10dp"
         app:backgroundTint="@null"
