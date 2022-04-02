@@ -62,15 +62,15 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-    private fun checkTextExisttance(text: String, view: TextInputLayout) {
+    private fun checkTextExistence(text: String, view: TextInputLayout) {
         if (text != "") {
             view.error = null
         }
     }
 
     private fun onTextChanged(view: EditText, viewLayout: TextInputLayout) {
-        view.doOnTextChanged { text, start, before, count ->
-            checkTextExisttance(text.toString(), viewLayout)
+        view.doOnTextChanged { text, _, _, _ ->
+            checkTextExistence(text.toString(), viewLayout)
         }
     }
 

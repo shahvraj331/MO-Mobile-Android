@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RestaurantManagement">
         <activity
+            android:name=".activities.Login"
+            android:exported="true" />
+        <activity
+            android:name=".activities.SignupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".tutorial.AuthenticatorBaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tutorial.TutorialScreenEnd"
+            android:exported="false" />
+        <activity
+            android:name=".tutorial.TutorialScreenMid"
+            android:exported="false" />
+        <activity
+            android:name=".tutorial.TutorialScreenStart"
+            android:exported="false"/>
+        <activity
             android:name=".activities.BottomNavigation"
             android:exported="true">
             <intent-filter>
