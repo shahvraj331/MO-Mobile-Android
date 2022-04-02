@@ -41,6 +41,13 @@
     <string name="next">Next</string>
     <string name="text_will_do_letter">I will do it letter</string>
     <string name="content_description">Image</string>
+    <string name="tutorialscreen_txt1">You are what you eat so eat right.</string>
+    <string name="tutorial_screen_txt2">Taste fresh delicious meals anytime</string>
+    <string name="tutorial_screen_txt3">Taste fresh delicious meals anytime</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="text_will_do_letter">I will do it letter</string>
+    <string name="content_description">Image</string>
     <!-- End sign up strings -->
 
     <!--Home-->
