@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fmHome">
+
+    <fragment
+        android:id="@+id/fmHome"
+        android:name="com.example.restaurantmanagement.activities.HomeFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_home">
+
+        <action android:id="@+id/action_gallery" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fmDinein"
+        android:name="com.example.restaurantmanagement.activities.DineInFragment"
+        android:label="fragment_add_message"
+        tools:layout="@layout/fragment_dine_in">
+
+        <action
+            android:id="@+id/action_first_to_second"
+            app:destination="@id/fmCart" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fmCart"
+        android:name="com.example.restaurantmanagement.activities.CartFragment"
+        android:label="fragment_view_message"
+        tools:layout="@layout/fragment_cart">
+
+        <action android:id="@+id/action_cart_to_fav" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fmFavoriteOrder"
+        android:name="com.example.restaurantmanagement.activities.CartFragment"
+        android:label="fragment_view_message"
+        tools:layout="@layout/fragment_favorite_order">
+
+        <action android:id="@+id/action_fav_to_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fmProfile"
+        android:name="com.example.restaurantmanagement.activities.CartFragment"
+        android:label="fragment_view_message"
+        tools:layout="@layout/fragment_profile">
+
+        <action android:id="@+id/action_profile_to_home" />
+    </fragment>
+</navigation>
