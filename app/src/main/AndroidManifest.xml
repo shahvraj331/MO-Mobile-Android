@@ -16,19 +16,16 @@
             android:name=".activities.SignupActivity"
             android:exported="true" />
         <activity
-            android:name=".tutorial.TutorialScreen4"
+            android:name=".tutorial.AuthenticatorBaseActivity"
             android:exported="false" />
         <activity
-            android:name=".tutorial.TutorialScreen3"
+            android:name=".tutorial.TutorialScreenEnd"
             android:exported="false" />
         <activity
-            android:name=".tutorial.TutorialScreen2"
+            android:name=".tutorial.TutorialScreenMid"
             android:exported="false" />
         <activity
-            android:name=".tutorial.TutorialScreen1"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".tutorial.TutorialScreenStart"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,6 +33,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
