@@ -8,73 +8,69 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.core.widget.doOnTextChanged
 import com.example.restaurantmanagement.R
-import com.example.restaurantmanagement.databinding.ActivitySignUpBinding
+import com.example.restaurantmanagement.databinding.ActivitySignupBinding
 import com.google.android.material.textfield.TextInputLayout
 
 class SignupActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivitySignUpBinding
+    private lateinit var binding: ActivitySignupBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignUpBinding.inflate(layoutInflater)
+        binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val actionBar = supportActionBar
         actionBar?.title = getString(R.string.sign_up_activity)
         actionBar?.setDisplayHomeAsUpEnabled(true)
 
-       binding.baselayout.setOnClickListener {
+        binding.baseLayout.setOnClickListener {
             if (currentFocus != null) {
                 val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
             }
         }
 
-        onTextChanged(binding.etUsername, binding.tiUsername)
-        onTextChanged(binding.etEmail, binding.tiEmail)
-        onTextChanged(binding.etPassword,binding.tiPassword)
+        onTextChanged(binding.etUsername, binding.tlUsername)
+        onTextChanged(binding.etEmail, binding.tlEmail)
+        onTextChanged(binding.etPassword,binding.tlPassword)
+        onTextChanged(binding.etConfirmPassword, binding.tlConfirmPassword)
 
-        binding.btnSignup.setOnClickListener {
-            navigateToLogin()
+        binding.tvGoToSignin.setOnClickListener {
+            val intent = Intent(this, SignupActivity::class.java)
+            startActivity(intent)
         }
 
         binding.btnSignup.setOnClickListener {
             validation()
         }
-
-        binding.tvSignin.setOnClickListener {
-            navigateToLogin()
-        }
-    }
-
-    private fun navigateToLogin() {
-        val intent = Intent(this, Login::class.java)
-        startActivity(intent)
     }
 
     private fun validation() {
-        if (binding.etUsername.text.toString() == "" || binding.etEmail.text.toString() == "" || binding.etPassword.text.toString() == "" ) {
-            binding.tiEmail.error = getString(R.string.txt_required)
-            binding.tiUsername.error = getString(R.string.txt_required)
-            binding.tiPassword.error = getString(R.string.txt_required)
-        } else if ( !android.util.Patterns.EMAIL_ADDRESS.matcher(binding.etEmail.text.toString()).matches() ) {
-            binding.tiEmail.error = getString(R.string.txt_invalid_email)
+        if (binding.etUsername.text.toString() == "" || binding.etEmail.text.toString() == "" || binding.etPassword.text.toString() == "" || binding.etConfirmPassword.text.toString() == "") {
+            binding.tlEmail.error = getString(R.string.txt_required)
+            binding.tlUsername.error = getString(R.string.txt_required)
+            binding.tlPassword.error = getString(R.string.txt_required)
+            binding.tlConfirmPassword.error = getString(R.string.txt_required)
+        } else if ( !android.util.Patterns.EMAIL_ADDRESS.matcher(binding.etEmail.text.toString()).matches() ){
+            binding.tlEmail.error = getString(R.string.txt_invalid_email)
+        } else if ( binding.etPassword.text.toString() != binding.etConfirmPassword.text.toString()) {
+            binding.tlConfirmPassword.error = getString(R.string.txt_password_mismatch)
         } else {
-            val intent = Intent(this, Login::class.java)
+            val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
     }
 
-    private fun checkTextExistence(text: String, view: TextInputLayout) {
+    private fun checkTextExisttance(text: String, view: TextInputLayout) {
         if (text != "") {
             view.error = null
         }
     }
 
     private fun onTextChanged(view: EditText, viewLayout: TextInputLayout) {
-        view.doOnTextChanged { text, _, _, _ ->
-            checkTextExistence(text.toString(), viewLayout)
+        view.doOnTextChanged { text, start, before, count ->
+            checkTextExisttance(text.toString(), viewLayout)
         }
     }
 
