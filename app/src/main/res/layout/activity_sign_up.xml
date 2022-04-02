@@ -2,22 +2,22 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/baselayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.Login">
+        tools:context=".activities.SignupActivity">
 
         <ImageView
             android:id="@+id/ivSignupLogo"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:src="@drawable/loginlogo"
+            android:src="@drawable/signuplogo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.35"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,12 +25,12 @@
             app:layout_constraintWidth_percent="0.7" />
 
         <TextView
-            android:id="@+id/tvLoginitle"
+            android:id="@+id/tvSignupTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:text="@string/tv_login"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@string/signup"
             android:textColor="@color/black"
             android:textSize="@dimen/_20sdp"
             android:textStyle="bold"
@@ -38,15 +38,47 @@
             app:layout_constraintTop_toBottomOf="@id/ivSignupLogo" />
 
         <TextView
-            android:id="@+id/tvLoginSubtitle"
+            android:id="@+id/tvSignupSubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_2sdp"
-            android:text="@string/login_subtitle"
+            android:text="@string/let_s_get_started"
             android:textSize="@dimen/_10sdp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvLoginitle" />
+            app:layout_constraintTop_toBottomOf="@id/tvSignupTitle" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiUsername"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:hint="@string/username"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_10sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_10sdp"
+            app:boxCornerRadiusTopStart="@dimen/_10sdp"
+            app:boxStrokeColor="@color/grey"
+            app:endIconMode="clear_text"
+            app:hintTextColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSignupSubtitle"
+            app:layout_constraintWidth_percent="0.9"
+            app:startIconDrawable="@drawable/profile">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tiEmail"
@@ -66,7 +98,7 @@
             app:hintTextColor="@color/grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvLoginSubtitle"
+            app:layout_constraintTop_toBottomOf="@id/tiUsername"
             app:layout_constraintWidth_percent="0.9"
             app:startIconDrawable="@drawable/email">
 
@@ -111,17 +143,17 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnSignup"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/_30sdp"
             android:backgroundTint="@color/orange"
-            android:text="@string/tv_login"
+            android:text="@string/signup"
             android:textAllCaps="false"
             android:textSize="@dimen/_14sdp"
             app:cornerRadius="@dimen/_20sdp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.10"
+            app:layout_constraintHeight_percent="0.08"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tiPassword"
             app:layout_constraintWidth_percent="0.9" />
@@ -132,25 +164,26 @@
             android:layout_marginTop="@dimen/_20sdp"
             android:gravity="center"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/btnLogin">
+            app:layout_constraintTop_toBottomOf="@id/btnSignup">
 
             <TextView
-                android:id="@+id/tvDontAccount"
+                android:id="@+id/tvAlreadyAccount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dont_have_account"
+                android:text="@string/already_have_an_account"
                 android:textAlignment="textEnd"
                 android:textColor="@color/grey" />
 
             <TextView
-                android:id="@+id/tvSignup"
+                android:id="@+id/tvSignin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_4sdp"
-                android:text="@string/sign_up"
+                android:text="@string/signin"
                 android:textColor="@color/orange" />
 
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

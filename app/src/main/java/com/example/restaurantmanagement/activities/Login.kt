@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.inputmethod.InputMethodManager
 import androidx.core.widget.doOnTextChanged
 import com.example.restaurantmanagement.MainActivity
 import com.example.restaurantmanagement.R
@@ -55,11 +56,23 @@ class Login : AppCompatActivity() {
             }
             else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(binding.etEmail.text.toString()).matches()) {
                 binding.tiEmail.error = getString(R.string.txt_invalid_email)
-            }
-            else {
+            } else {
                 goToHome()
             }
         }
+
+        binding.tvSignup.setOnClickListener {
+            val intent = Intent(applicationContext,SignupActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.baselayout.setOnClickListener {
+            if (currentFocus != null) {
+                val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
+            }
+        }
+
     }
 
     private fun checkTextExistence(text: String, view: TextInputLayout) {
