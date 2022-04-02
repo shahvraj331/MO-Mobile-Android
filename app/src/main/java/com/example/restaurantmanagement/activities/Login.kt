@@ -8,6 +8,7 @@ import androidx.core.widget.doOnTextChanged
 import com.example.restaurantmanagement.MainActivity
 import com.example.restaurantmanagement.R
 import com.example.restaurantmanagement.databinding.ActivityLoginBinding
+import com.example.restaurantmanagement.menulist.Menu
 import com.google.android.material.textfield.TextInputLayout
 
 class Login : AppCompatActivity() {
@@ -69,7 +70,7 @@ class Login : AppCompatActivity() {
     }
 
     private fun goToHome() {
-        val intent = Intent(applicationContext,MainActivity::class.java)
+        val intent = Intent(applicationContext,Menu::class.java)
         startActivity(intent)
     }
 
