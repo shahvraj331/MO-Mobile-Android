@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/fmFavoriteOrder"
-        android:name="com.example.restaurantmanagement.activities.CartFragment"
+        android:name="com.example.restaurantmanagement.activities.FavoriteOrderFragment"
         android:label="fragment_view_message"
         tools:layout="@layout/fragment_favorite_order">
 
@@ -45,7 +45,7 @@
 
     <fragment
         android:id="@+id/fmProfile"
-        android:name="com.example.restaurantmanagement.activities.CartFragment"
+        android:name="com.example.restaurantmanagement.activities.ProfileFragment"
         android:label="fragment_view_message"
         tools:layout="@layout/fragment_profile">
 

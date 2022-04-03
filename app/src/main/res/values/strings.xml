@@ -46,7 +46,8 @@
     <string name="txt_off">30% OFF</string>
     <string name="txt_upto">Upto ₹10</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hello Cart fragment</string>
+    <string name="hello_user_fragment">Hello User fragment</string>
     <string name="home">Home</string>
     <string name="dine_in">Dine In</string>
     <string name="cart">Cart</string>
@@ -57,7 +58,6 @@
     <!--    Menu Strings-->
     <string name="searchText">Search</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="_05_99">$05.99</string>
     <string name="spicy_cheese_burger">Spicy Cheese Burger</string>
     <string name="_1">1</string>
