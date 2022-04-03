@@ -40,19 +40,19 @@ class MyMenuFragmentAdapter(private var foodList: ArrayList<Food>, private var c
             holder.quantity.text = quantityValue.toString()
         }
         holder.quantityMinus.setOnClickListener {
-            if (quantityValue > 1) {
+            if (quantityValue >= 1) {
                 quantityValue -= 1
             }
             holder.quantity.text = quantityValue.toString()
         }
         var flag = 0
-        var selected = holder.addFav.isSelected
+        val selected = holder.addFav.isSelected
         Log.d("value", selected.toString())
         holder.addFav.setImageResource(R.drawable.fav_button_unselected)
         holder.addFav.setOnClickListener {
            holder.addFav.animate().apply {
               duration = 1000
-               rotationYBy(360f)
+               rotationXBy(360f)
             }.start()
             if (flag == 0) {
                 holder.addFav.setImageResource(R.drawable.fav_button)

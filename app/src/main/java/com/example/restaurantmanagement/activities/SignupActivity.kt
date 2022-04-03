@@ -36,7 +36,7 @@ class SignupActivity : AppCompatActivity() {
         onTextChanged(binding.etPassword,binding.tiPassword)
 
         binding.tvSignin.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
 
@@ -53,7 +53,7 @@ class SignupActivity : AppCompatActivity() {
         } else if ( !android.util.Patterns.EMAIL_ADDRESS.matcher(binding.etEmail.text.toString()).matches() ){
             binding.tiEmail.error = getString(R.string.txt_invalid_email)
         } else {
-            val intent = Intent(this, SignupActivity::class.java)
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
     }

@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RestaurantManagement">
         <activity
+            android:name=".activities.SplashScreen"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".activities.Login"
             android:exported="true" />
         <activity
@@ -27,16 +36,11 @@
         <activity
             android:name=".tutorial.TutorialScreenStart"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-
         <activity
             android:name=".menulist.Menu"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".activities.BottomNavigation"
             android:exported="false" />
