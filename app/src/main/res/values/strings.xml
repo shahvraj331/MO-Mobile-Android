@@ -33,7 +33,7 @@
     <string name="sign_up_activity">Sign up</string>
     <string name="tutorialscreen_txt1">You are what you eat \nso eat right.</string>
     <string name="tutorial_screen_txt2">Taste fresh delicious meals \nanytime</string>
-    <string name="tutorial_screen_txt3">Choose your favourite dishes \nfrom the menu</string>
+    <string name="tutorial_screen_txt3">Choose Your Favourite Dishes \nfrom the menu</string>
     <string name="skip">Skip</string>
     <string name="next">Next</string>
     <string name="text_will_do_letter">I will do it letter</string>
@@ -58,7 +58,7 @@
     <string name="searchText">Search</string>
     <string name="_05_99">$05.99</string>
     <string name="spicy_cheese_burger">Spicy Cheese Burger</string>
-    <string name="_1">1</string>
+    <string name="_1">0</string>
     <string name="table">Table</string>
     <!--End Menu Strings-->
 

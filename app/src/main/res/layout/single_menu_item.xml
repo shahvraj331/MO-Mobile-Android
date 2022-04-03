@@ -20,6 +20,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvImage"
+                app:cardCornerRadius="@dimen/_10sdp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintHeight_percent="0.5"
@@ -86,8 +87,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:text="@string/spicy_cheese_burger"
+                android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_8ssp"
+                android:textSize="@dimen/_10ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cvPrice" />
@@ -96,7 +98,8 @@
                 android:id="@+id/stepper"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_15sdp"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="3"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
