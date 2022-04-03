@@ -1,4 +1,4 @@
-package com.example.restaurantmanagement.activities
+package com.example.restaurantmanagement.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,13 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.restaurantmanagement.R
 
-class DineInFragment : Fragment() {
+class FavoriteOrderFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-
-        return inflater.inflate(R.layout.fragment_dine_in, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_favorite_order, container, false)
     }
 }

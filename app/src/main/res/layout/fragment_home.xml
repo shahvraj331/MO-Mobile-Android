@@ -1,47 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".activities.HomeFragment">
+    tools:context=".fragments.HomeFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivHeader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/header"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/header"/>
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPopularItem"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.6"
-        app:layout_constraintHeight_percent="0.05"
+        android:layout_marginTop="8dp"
         android:text="@string/popular_items"
-        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
         android:textStyle="bold"
-        android:gravity="center"
-        android:textSize="@dimen/_15ssp"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="@id/ivHeader"
         app:layout_constraintTop_toBottomOf="@id/ivHeader"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintWidth_percent="0.5" />
+
     <com.google.android.material.button.MaterialButton
-        app:cornerRadius="@dimen/_5sdp"
-        app:strokeColor="@color/orange"
-        android:id="@+id/simple_form"
-        app:layout_constraintWidth_percent="0.4"
+        android:id="@+id/btnViewAllPopularFoods"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:textAlignment="center"
-        app:layout_constraintHeight_percent="0.05"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
         android:text="@string/view_all"
-        app:layout_constraintTop_toBottomOf="@id/ivHeader"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/orange"
-        android:textSize="@dimen/_13sdp" />
+        android:textSize="@dimen/_11sdp"
+        app:cornerRadius="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tvPopularItem"
+        app:layout_constraintTop_toBottomOf="@id/ivHeader"
+        app:layout_constraintWidth_percent="0.3"
+        app:strokeColor="@color/orange" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPopularItem"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnViewAllPopularFoods" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSpecialOfferItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/special_offer"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="@id/tvPopularItem"
+        app:layout_constraintTop_toBottomOf="@id/rvPopularItem"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnViewAllSpecialOffer"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="@string/view_all"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/_11sdp"
+        app:cornerRadius="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tvSpecialOfferItem"
+        app:layout_constraintTop_toBottomOf="@id/rvPopularItem"
+        app:layout_constraintWidth_percent="0.3"
+        app:strokeColor="@color/orange" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSpecialOffer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnViewAllSpecialOffer" />
 </androidx.constraintlayout.widget.ConstraintLayout>

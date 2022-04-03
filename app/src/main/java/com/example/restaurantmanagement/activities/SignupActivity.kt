@@ -36,7 +36,7 @@ class SignupActivity : AppCompatActivity() {
         onTextChanged(binding.etPassword,binding.tiPassword)
 
         binding.tvSignin.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
 
