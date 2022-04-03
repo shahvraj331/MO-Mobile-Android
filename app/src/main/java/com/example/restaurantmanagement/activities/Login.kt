@@ -70,7 +70,7 @@ class Login : AppCompatActivity() {
     }
 
     private fun goToHome() {
-        val intent = Intent(applicationContext,Menu::class.java)
+        val intent = Intent(applicationContext,BottomNavigation::class.java)
         startActivity(intent)
     }
 

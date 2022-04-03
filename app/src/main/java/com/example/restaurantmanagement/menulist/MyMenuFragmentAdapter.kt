@@ -1,11 +1,15 @@
 package com.example.restaurantmanagement.menulist
 
+import android.content.Context
+import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.restaurantmanagement.R
 import com.example.restaurantmanagement.databinding.SingleMenuItemBinding
 
-class MyMenuFragmentAdapter(private var foodList: ArrayList<Food>) :
+class MyMenuFragmentAdapter(private var foodList: ArrayList<Food>, private var context: Context) :
     RecyclerView.Adapter<MyMenuFragmentAdapter.ViewHolder>() {
 
     lateinit var binding: SingleMenuItemBinding
@@ -17,7 +21,7 @@ class MyMenuFragmentAdapter(private var foodList: ArrayList<Food>) :
         val quantityPlus = binding.btnAdd
         val quantityMinus = binding.btnMinus
         val quantity = binding.txtquantity
-
+        val addFav = binding.btnAddToFav
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -40,6 +44,23 @@ class MyMenuFragmentAdapter(private var foodList: ArrayList<Food>) :
                 quantityValue -= 1
             }
             holder.quantity.text = quantityValue.toString()
+        }
+        var flag = 0
+        var selected = holder.addFav.isSelected
+        Log.d("value", selected.toString())
+        holder.addFav.setImageResource(R.drawable.fav_button_unselected)
+        holder.addFav.setOnClickListener {
+           holder.addFav.animate().apply {
+              duration = 1000
+               rotationYBy(360f)
+            }.start()
+            if (flag == 0) {
+                holder.addFav.setImageResource(R.drawable.fav_button)
+                flag = 1
+            } else if (flag == 1) {
+                holder.addFav.setImageResource(R.drawable.fav_button_unselected)
+                flag = 0
+            }
         }
     }
 
