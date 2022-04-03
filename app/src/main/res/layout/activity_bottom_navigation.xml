@@ -6,28 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".activities.BottomNavigation">
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/navFragment"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:defaultNavHost="true"
-            app:layout_constraintHeight_percent="0.9"
-            app:navGraph="@navigation/nav_graph"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/bnJetpack"/>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/bnJetpack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_graph" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bnJetpack"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/navFragment"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:labelVisibilityMode="unlabeled"
-            app:menu="@menu/bottomnav_menu" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnJetpack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/navFragment"
+        app:menu="@menu/bottomnav_menu" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/navFragment"
+        app:layout_constraintStart_toStartOf="@+id/navFragment"
+        app:layout_constraintTop_toTopOf="@+id/navFragment" />
 </androidx.constraintlayout.widget.ConstraintLayout>

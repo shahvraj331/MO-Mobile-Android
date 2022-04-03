@@ -3,7 +3,9 @@ package com.example.restaurantmanagement.tutorial
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.restaurantmanagement.HomeData
 import com.example.restaurantmanagement.R
+import com.example.restaurantmanagement.activities.BottomNavigation
 import com.example.restaurantmanagement.activities.Login
 import com.example.restaurantmanagement.activities.SignupActivity
 import com.example.restaurantmanagement.databinding.ActivityAuthenticatorBaseBinding
@@ -25,6 +27,11 @@ class AuthenticatorBaseActivity : AppCompatActivity() {
         
         binding.btnSignup.setOnClickListener { 
             val intent = Intent(this@AuthenticatorBaseActivity, SignupActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.tvDoLetter.setOnClickListener {
+            val intent = Intent(this@AuthenticatorBaseActivity, BottomNavigation::class.java)
             startActivity(intent)
         }
     }

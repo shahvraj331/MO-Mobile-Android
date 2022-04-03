@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fmHome"
-        android:name="com.example.restaurantmanagement.activities.HomeFragment"
+        android:name="com.example.restaurantmanagement.fragments.HomeFragment"
         android:label="fragment_gallery"
         tools:layout="@layout/fragment_home">
 
@@ -15,28 +15,8 @@
     </fragment>
 
     <fragment
-        android:id="@+id/fmDinein"
-        android:name="com.example.restaurantmanagement.activities.DineInFragment"
-        android:label="fragment_add_message"
-        tools:layout="@layout/fragment_dine_in">
-
-        <action
-            android:id="@+id/action_first_to_second"
-            app:destination="@id/fmCart" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/fmCart"
-        android:name="com.example.restaurantmanagement.activities.CartFragment"
-        android:label="fragment_view_message"
-        tools:layout="@layout/fragment_cart">
-
-        <action android:id="@+id/action_cart_to_fav" />
-    </fragment>
-
-    <fragment
         android:id="@+id/fmFavoriteOrder"
-        android:name="com.example.restaurantmanagement.activities.CartFragment"
+        android:name="com.example.restaurantmanagement.fragments.FavoriteOrderFragment"
         android:label="fragment_view_message"
         tools:layout="@layout/fragment_favorite_order">
 
@@ -45,10 +25,20 @@
 
     <fragment
         android:id="@+id/fmProfile"
-        android:name="com.example.restaurantmanagement.activities.CartFragment"
+        android:name="com.example.restaurantmanagement.fragments.ProfileFragment"
         android:label="fragment_view_message"
         tools:layout="@layout/fragment_profile">
 
         <action android:id="@+id/action_profile_to_home" />
     </fragment>
+    <fragment
+        android:id="@+id/fmCart"
+        android:name="com.example.restaurantmanagement.cart.AddToCart"
+        android:label="fragment_add_to_cart"
+        tools:layout="@layout/fragment_add_to_cart" />
+    <fragment
+        android:id="@+id/fmDinein"
+        android:name="com.example.restaurantmanagement.fragments.DineInFragment"
+        android:label="fragment_dine_in_menu_table"
+        tools:layout="@layout/fragment_dine_in_menu_table" />
 </navigation>

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.restaurantmanagement.R
+import com.example.restaurantmanagement.activities.BottomNavigation
 import com.example.restaurantmanagement.databinding.ActivityTutorialScreenStartBinding
 
 class TutorialScreenStart : AppCompatActivity() {

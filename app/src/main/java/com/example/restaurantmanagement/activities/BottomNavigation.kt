@@ -27,4 +27,5 @@ class BottomNavigation : AppCompatActivity() {
         val navController: NavController = navHostFragment.navController
         binding.bnJetpack.setupWithNavController(navController)
     }
+
 }
