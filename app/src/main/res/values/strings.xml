@@ -26,5 +26,8 @@
     <string name="sign_up_activity">Sign up</string>
     <!-- End sign up strings -->
 
+    <string name="etComment">Add a comment</string>
+    <string name="btSubmit">Submit</string>
+    <string name="tvRating">Ratings</string>
 
 </resources>
