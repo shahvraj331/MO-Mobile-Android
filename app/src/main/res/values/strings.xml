@@ -45,8 +45,7 @@
     <string name="item_burger">Spicy cheese burger</string>
     <string name="txt_off">30% OFF</string>
     <string name="txt_upto">Upto ₹10</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="home">Home</string>
     <string name="dine_in">Dine In</string>
     <string name="cart">Cart</string>
@@ -64,4 +63,28 @@
     <string name="selected">selected</string>
     <string name="special_offer">Special Offer</string>
 
+    <!--    Menu Strings-->
+    <string name="searchText">Search</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_05_99">$05.99</string>
+    <string name="spicy_cheese_burger">Spicy Cheese Burger</string>
+    <string name="_1">1</string>
+    <string name="table">Table</string>
+    <string name="title_activity_forgot_password">ForgotPassword</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!--End Menu Strings-->
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="forgot_password_subtitle">Enter your email</string>
+    <string name="btn_submit">Submit</string>
+    <string name="tv_reset_password">Reset Password</string>
+    <string name="tv_confirm_password">Re-Enter Password</string>
+    <string name="password_subtitle">Enter your password</string>
+    <string name="btn_change">Change</string>
 </resources>

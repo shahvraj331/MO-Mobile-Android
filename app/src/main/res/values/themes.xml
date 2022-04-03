@@ -14,4 +14,19 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_20sdp</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="Theme.RestaurantManagement.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.RestaurantManagement.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.RestaurantManagement.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

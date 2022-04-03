@@ -29,9 +29,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="22dp"
         app:cardCornerRadius="@dimen/_20ssp"
         android:elevation="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/cvPopularItem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.2"
         app:layout_constraintStart_toStartOf="parent"

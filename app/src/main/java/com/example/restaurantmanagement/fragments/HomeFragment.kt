@@ -42,20 +42,18 @@ class HomeFragment : Fragment() {
 
     private fun customRecyclerView() {
         items = arrayListOf(
-            HomeData(title = "title1", image = R.drawable.burger),
-            HomeData(title = "title2", image = R.drawable.burger),
-            HomeData(title = "title3", image = R.drawable.burger),
-            HomeData(title = "title2", image = R.drawable.burger),
-            HomeData(title = "title2", image = R.drawable.burger),
-            HomeData(title = "title2", image = R.drawable.burger))
+            HomeData(title = "Burger", image = R.drawable.burger),
+            HomeData(title = "Mexican cheese pizza", image = R.drawable.mexican_cheese_pizza),
+            HomeData(title = "Donuts", image = R.drawable.donuts),
+            HomeData(title = "Cheese mayonnaise burger", image = R.drawable.cheese_mayonnaise_burger),
+            HomeData(title = "Onion capsicum pizza", image = R.drawable.onion_capsicum_pizza))
 
         offers = arrayListOf(
-            HomeData(image = R.drawable.burger, offer = "30% OFF"),
-            HomeData(image = R.drawable.burger, offer = "60% OFF"),
-            HomeData(image = R.drawable.burger, offer = "23% OFF"),
+            HomeData(image = R.drawable.cheese_mayonnaise_burger, offer = "30% OFF"),
+            HomeData(image = R.drawable.donuts, offer = "60% OFF"),
+            HomeData(image = R.drawable.mexican_cheese_pizza, offer = "23% OFF"),
             HomeData(image = R.drawable.burger, offer = "36% OFF"),
-            HomeData(image = R.drawable.burger, offer = "40% OFF"),
-            HomeData(image = R.drawable.burger, offer = "50% OFF"))
+            HomeData(image = R.drawable.cheese_mayonnaise_burger, offer = "40% OFF"))
 
         val adapter = HomePopularFragmentAdapter(items)
         val linearLayoutPopularFoods = LinearLayoutManager(requireContext())

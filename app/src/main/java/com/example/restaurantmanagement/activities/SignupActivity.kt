@@ -50,9 +50,11 @@ class SignupActivity : AppCompatActivity() {
             binding.tiEmail.error = getString(R.string.txt_required)
             binding.tiUsername.error = getString(R.string.txt_required)
             binding.tiPassword.error = getString(R.string.txt_required)
-        } else if ( !android.util.Patterns.EMAIL_ADDRESS.matcher(binding.etEmail.text.toString()).matches() ){
+        }
+        else if ( !android.util.Patterns.EMAIL_ADDRESS.matcher(binding.etEmail.text.toString()).matches() ) {
             binding.tiEmail.error = getString(R.string.txt_invalid_email)
-        } else {
+        }
+        else {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
