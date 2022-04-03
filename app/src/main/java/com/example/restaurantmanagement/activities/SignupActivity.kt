@@ -46,14 +46,20 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun validation() {
-        if (binding.etUsername.text.toString() == "" || binding.etEmail.text.toString() == "" || binding.etPassword.text.toString() == "") {
+        if (binding.etEmail.text.toString() == "") {
             binding.tiEmail.error = getString(R.string.txt_required)
-            binding.tiUsername.error = getString(R.string.txt_required)
+        }
+        else if(binding.etPassword.text.toString() == "") {
             binding.tiPassword.error = getString(R.string.txt_required)
-        } else if ( !android.util.Patterns.EMAIL_ADDRESS.matcher(binding.etEmail.text.toString()).matches() ){
+        }
+        else if (binding.etUsername.text.toString() == "") {
+            binding.tiUsername.error = getString(R.string.txt_required)
+        }
+        else if ( !android.util.Patterns.EMAIL_ADDRESS.matcher(binding.etEmail.text.toString()).matches() ) {
             binding.tiEmail.error = getString(R.string.txt_invalid_email)
-        } else {
-            val intent = Intent(this, Login::class.java)
+        }
+        else {
+            val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
     }

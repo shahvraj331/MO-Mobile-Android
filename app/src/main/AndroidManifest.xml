@@ -4,11 +4,18 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/main_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/main_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.RestaurantManagement">
+        <activity
+            android:name=".activities.ResetPassword"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".activities.ForgotPassword"
+            android:exported="false"/>
         <activity
             android:name=".activities.SplashScreen"
             android:exported="true" >
@@ -20,10 +27,11 @@
         </activity>
         <activity
             android:name=".activities.Login"
-            android:exported="true" />
+            android:exported="false">
+        </activity>
         <activity
             android:name=".activities.SignupActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".tutorial.AuthenticatorBaseActivity"
             android:exported="false" />
@@ -35,15 +43,13 @@
             android:exported="false" />
         <activity
             android:name=".tutorial.TutorialScreenStart"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".menulist.Menu"
-            android:exported="false" />
+            android:exported="true"/>
         <activity
             android:name=".activities.BottomNavigation"
-            android:exported="false" />
+            android:exported="false"/>
+        <activity
+            android:name=".menulist.Menu"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="false" />

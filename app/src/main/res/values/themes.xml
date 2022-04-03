@@ -14,6 +14,15 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.RestaurantManagement.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.RestaurantManagement.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.RestaurantManagement.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <!--    Rounded Image View Style-->
     <style name="roundedImageView" parent="">
         <item name="cornerFamily">rounded</item>

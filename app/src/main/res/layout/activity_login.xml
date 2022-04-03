@@ -109,6 +109,17 @@
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/forgotPass"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.3"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/orange"
+        android:text="@string/forgot_pass"
+        app:layout_constraintTop_toBottomOf="@id/tiPassword"
+        app:layout_constraintEnd_toEndOf="@id/tiPassword"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogin"
@@ -123,7 +134,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.10"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tiPassword"
+            app:layout_constraintTop_toBottomOf="@id/forgotPass"
             app:layout_constraintWidth_percent="0.9" />
 
         <LinearLayout

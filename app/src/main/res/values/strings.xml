@@ -47,12 +47,22 @@
     <string name="txt_upto">Upto ₹10</string>
     <string name="hello_blank_fragment">Hello Cart fragment</string>
     <string name="hello_user_fragment">Hello User fragment</string>
+
     <string name="home">Home</string>
     <string name="dine_in">Dine In</string>
     <string name="cart">Cart</string>
     <string name="favorite">Favorite</string>
     <string name="popular_items">Popular Foods</string>
     <string name="view_all">view all</string>
+    <string name="cancel">Cancel</string>
+    <string name="cart_food_name">Spicy cheese burger</string>
+    <string name="cart_food_price">$05.99</string>
+    <string name="book_table">Book Table</string>
+    <string name="book_your_table">Book your Table</string>
+    <string name="available">Available</string>
+    <string name="book">Booked</string>
+    <string name="selected">selected</string>
+    <string name="special_offer">Special Offer</string>
 
     <!--    Menu Strings-->
     <string name="searchText">Search</string>
@@ -66,4 +76,26 @@
     <string name="userName">Username</string>
     <string name="logout">Logout</string>
 
+    <!--    Menu Strings-->
+    <string name="title_activity_forgot_password">ForgotPassword</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!--End Menu Strings-->
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="forgot_password_subtitle">Enter your email</string>
+    <string name="btn_submit">Submit</string>
+    <string name="tv_reset_password">Reset Password</string>
+    <string name="tv_confirm_password">Re-Enter Password</string>
+    <string name="password_subtitle">Enter your password</string>
+    <string name="btn_change">Change</string>
+    <string name="zero">0</string>
+    <string name="vraj_shah_gmail_com">vraj.shah@gmail.com</string>
+    <string name="vraj">vraj</string>
+    <string name="forgot_pass">forgot password?</string>
 </resources>

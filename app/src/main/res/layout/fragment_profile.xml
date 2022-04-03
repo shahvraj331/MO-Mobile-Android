@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ProfileFragment">
+    tools:context=".fragments.ProfileFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/profileHeader"
         android:layout_width="0dp"
         android:layout_height="0dp"
+
         android:scaleType="fitXY"
         android:src="@drawable/profile_header"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +53,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etUsername"
+            android:text="@string/vraj"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:imeOptions="actionNext"
@@ -83,6 +85,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
+            android:text="@string/vraj_shah_gmail_com"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:imeOptions="actionNext"

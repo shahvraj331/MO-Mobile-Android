@@ -1,37 +1,47 @@
 package com.example.restaurantmanagement.activities
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
-import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
+
 import com.example.restaurantmanagement.MainActivity
 import com.example.restaurantmanagement.R
 import com.example.restaurantmanagement.databinding.ActivityLoginBinding
-import com.example.restaurantmanagement.menulist.Menu
+import com.example.restaurantmanagement.tutorial.TutorialScreenEnd
 import com.google.android.material.textfield.TextInputLayout
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
 
 class Login : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
+    lateinit var session: SessionManager
+    lateinit var pre: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        pre = getSharedPreferences("KOtlinDemo", MODE_PRIVATE)
+        session = SessionManager(applicationContext)
+
+        if(session.isLogin()) {
+            val i = Intent(applicationContext, BottomNavigation::class.java)
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(i)
+        }
 
         val actionBar = supportActionBar
         actionBar?.title = getString(R.string.login_activity)
         actionBar?.setDisplayHomeAsUpEnabled(true)
-
-        binding.baselayout.setOnClickListener {
-            if (currentFocus != null) {
-                val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
-            }
-        }
-
         loginAuthentication()
     }
 
@@ -46,34 +56,32 @@ class Login : AppCompatActivity() {
         }
 
         binding.etEmail.doOnTextChanged { text, _, _, _ ->
-            if (text != "") {
-                binding.tiEmail.error = null
-            }
+            checkTextExistence(text.toString(), binding.tiEmail)
         }
 
-        binding.etPassword.doOnTextChanged { text, _, _, _ ->
-            if (text != "") {
-                binding.tiPassword.error = null
-            }
+        binding.forgotPass.setOnClickListener {
+            val intent = Intent(applicationContext,ForgotPassword::class.java)
+            startActivity(intent)
         }
-
         binding.btnLogin.setOnClickListener {
-            if (binding.etEmail.text.toString() == "" || binding.etPassword.text.toString() == "") {
+            if (binding.etEmail.text.toString() == "") {
                 binding.tiEmail.error = getString(R.string.txt_required)
+            }
+            else if(binding.etPassword.text.toString() == "") {
                 binding.tiPassword.error = getString(R.string.txt_required)
             }
             else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(binding.etEmail.text.toString()).matches()) {
                 binding.tiEmail.error = getString(R.string.txt_invalid_email)
             }
             else {
-                goToHome()
+                session.createLoginSession(binding.etEmail.text.toString())
+                val intent = Intent(this@Login, BottomNavigation::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+                //postData(PostData(binding.etEmail.text.toString(), binding.etPassword.text.toString()))
             }
         }
 
-        binding.tvSignup.setOnClickListener {
-            val intent = Intent(applicationContext, SignupActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     private fun checkTextExistence(text: String, view: TextInputLayout) {
@@ -82,13 +90,30 @@ class Login : AppCompatActivity() {
         }
     }
 
-    private fun goToHome() {
-        val intent = Intent(applicationContext,BottomNavigation::class.java)
-        startActivity(intent)
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         finish()
         return super.onOptionsItemSelected(item)
     }
+
+    fun postData(data: PostData) {
+        val retrofitData = APIClient.retrofitBuilder.loginApi(
+            data.email, data.password
+        )
+        retrofitData.enqueue(object: Callback<Unit>{
+            override fun onResponse(
+                call: Call<Unit>,
+                response: Response<Unit>
+            ) {
+                if (response.code() == 200) {
+                    Log.d("Success",response.code().toString())
+                } else {
+                    Log.d("failure",response.code().toString())
+                }
+            }
+            override fun onFailure(call: Call<Unit>, t: Throwable) {
+                Log.d("failure","Failed to load url")
+            }
+        })
+    }
+
 }
