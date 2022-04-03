@@ -54,4 +54,14 @@
     <string name="popular_items">Popular Foods</string>
     <string name="view_all">view all</string>
 
+    <!--    Menu Strings-->
+    <string name="searchText">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_05_99">$05.99</string>
+    <string name="spicy_cheese_burger">Spicy Cheese Burger</string>
+    <string name="_1">1</string>
+    <string name="table">Table</string>
+    <!--End Menu Strings-->
+
 </resources>

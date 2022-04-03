@@ -33,12 +33,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".menulist.Menu"
+            android:exported="false"/>
         <activity
             android:name=".activities.BottomNavigation"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>
