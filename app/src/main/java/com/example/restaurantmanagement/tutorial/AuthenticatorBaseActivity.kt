@@ -16,7 +16,7 @@ class AuthenticatorBaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAuthenticatorBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        overridePendingTransition(R.anim.slid_left, R.anim.slide_right)
+        overridePendingTransition(R.anim.slide_left, R.anim.slide_right)
 
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this@AuthenticatorBaseActivity, Login::class.java)

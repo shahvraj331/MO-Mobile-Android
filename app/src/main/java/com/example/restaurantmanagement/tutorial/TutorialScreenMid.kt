@@ -15,7 +15,7 @@ class TutorialScreenMid : AppCompatActivity() {
         setContentView(R.layout.activity_tutorial_screen_mid)
         binding = ActivityTutorialScreenMidBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        overridePendingTransition(R.anim.slid_left, R.anim.slide_right)
+        overridePendingTransition(R.anim.slide_left, R.anim.slide_right)
 
         binding.btnNext.setOnClickListener {
             val intent = Intent(applicationContext, TutorialScreenEnd::class.java)

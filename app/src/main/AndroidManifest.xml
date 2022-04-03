@@ -26,9 +26,6 @@
             android:exported="false" />
         <activity
             android:name=".tutorial.TutorialScreenStart"
-            android:exported="false"/>
-        <activity
-            android:name=".activities.BottomNavigation"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,13 +34,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.Login"
-            android:exported="true">
-        </activity>
+            android:name=".activities.BottomNavigation"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="false"/>
     </application>
 
 </manifest>
