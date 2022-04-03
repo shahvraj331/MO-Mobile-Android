@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fmHome"
-        android:name="com.example.restaurantmanagement.activities.HomeFragment"
+        android:name="com.example.restaurantmanagement.fragments.HomeFragment"
         android:label="fragment_gallery"
         tools:layout="@layout/fragment_home">
 
@@ -16,7 +16,7 @@
 
     <fragment
         android:id="@+id/fmDinein"
-        android:name="com.example.restaurantmanagement.activities.DineInFragment"
+        android:name="com.example.restaurantmanagement.fragments.DineInFragment"
         android:label="fragment_add_message"
         tools:layout="@layout/fragment_dine_in">
 
@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/fmCart"
-        android:name="com.example.restaurantmanagement.activities.CartFragment"
+        android:name="com.example.restaurantmanagement.fragments.CartFragment"
         android:label="fragment_view_message"
         tools:layout="@layout/fragment_cart">
 
@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/fmFavoriteOrder"
-        android:name="com.example.restaurantmanagement.activities.CartFragment"
+        android:name="com.example.restaurantmanagement.fragments.CartFragment"
         android:label="fragment_view_message"
         tools:layout="@layout/fragment_favorite_order">
 
@@ -45,7 +45,7 @@
 
     <fragment
         android:id="@+id/fmProfile"
-        android:name="com.example.restaurantmanagement.activities.CartFragment"
+        android:name="com.example.restaurantmanagement.fragments.CartFragment"
         android:label="fragment_view_message"
         tools:layout="@layout/fragment_profile">
 

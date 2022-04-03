@@ -1,39 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clPopularItem"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/clPopularItem"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_gravity="center"
+    android:paddingStart="@dimen/_10sdp"
+    android:paddingEnd="@dimen/_5sdp">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cvPopularItem"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/_15sdp"
+        android:elevation="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:cardCornerRadius="@dimen/_10ssp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivPopularItem"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/burger"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitXY"
+            android:src="@drawable/burger" />
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.95"
+        android:layout_marginTop="-20dp"
         app:cardCornerRadius="@dimen/_20ssp"
-        android:layout_marginTop="-30dp"
+        android:elevation="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cvPopularItem">
-        <TextView
+        app:layout_constraintTop_toBottomOf="@id/cvPopularItem"
+        app:layout_constraintWidth_percent="0.95">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPopularItemTitle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/item_burger"
             android:gravity="center"
-            android:textAlignment="center"/>
+            android:text="@string/item_burger"
+            android:textAlignment="center" />
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
