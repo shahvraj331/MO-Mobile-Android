@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".cart.AddToCart">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:weightSum="2"
+    android:orientation="horizontal"
+    android:padding="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_50sdp"
+    android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvCartItem"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_weight="1"
+        android:layout_gravity="fill"
+        android:backgroundTint="@color/white"
+        app:cardElevation="@dimen/_1sdp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grand Total: "
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textSize="@dimen/_12sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 Rs."
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textSize="@dimen/_12sdp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvCartItem2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_weight="1"
+        android:layout_gravity="fill"
+        android:backgroundTint="@color/orange"
+        app:cardElevation="@dimen/_1sdp"
+        app:cardUseCompatPadding="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Order"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"/>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
+
+</LinearLayout>

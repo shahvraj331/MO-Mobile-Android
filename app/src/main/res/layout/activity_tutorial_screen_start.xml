@@ -42,7 +42,7 @@
         android:layout_marginTop="@dimen/_60sdp"
         android:backgroundTint="@color/orange"
         android:text="@string/next"
-        android:textAllCaps="true"
+        android:textAllCaps="false"
         android:textSize="@dimen/_14sdp"
         app:cornerRadius="@dimen/_20sdp"
         app:layout_constraintEnd_toEndOf="parent"

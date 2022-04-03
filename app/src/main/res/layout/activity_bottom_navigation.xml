@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.BottomNavigation">
-
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/navFragment"
             android:layout_width="match_parent"
@@ -18,7 +17,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/bnJetpack"/>
-
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnJetpack"
             android:layout_width="match_parent"
@@ -29,5 +27,4 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:labelVisibilityMode="unlabeled"
             app:menu="@menu/bottomnav_menu" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
